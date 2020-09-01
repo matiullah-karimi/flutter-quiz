@@ -1,11 +1,11 @@
-class Question {
+class Option {
   int id;
   String text;
   bool isCorrect;
 
-  Question({this.id, this.text, this.isCorrect});
+  Option({this.id, this.text, this.isCorrect});
 
-  Question.fromJson(Map<String, dynamic> json) {
+  Option.fromJson(Map<String, dynamic> json) {
     this.id = json['id'];
     this.text = json['text'];
     this.isCorrect = json['isCorrect'];

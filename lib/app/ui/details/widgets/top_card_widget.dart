@@ -12,7 +12,7 @@ class CardTopCustomWidget extends StatelessWidget {
         padding: EdgeInsets.all(16),
         child: GetX<DetailsController>(
           builder: (_) => Text(
-            _.question.title,
+            _.question.text,
             style: cardTextStyle,
           ),
         ),

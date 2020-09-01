@@ -15,7 +15,7 @@ class CardBottomCustomWidget extends StatelessWidget {
               padding: EdgeInsets.all(16),
               child: GetX<DetailsController>(
                   builder: (_) => Text(
-                        _.question.body,
+                        _.question.description,
                         style: cardTextStyle,
                       )),
             ),

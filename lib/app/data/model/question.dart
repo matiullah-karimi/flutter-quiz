@@ -1,9 +1,12 @@
+import 'package:quiz/app/data/model/option.dart';
+
 class Question {
   int id;
   String text;
   String description;
+  List<Option> options;
 
-  Question({this.id, this.text, this.description});
+  Question({this.id, this.text, this.description, this.options});
 
   Question.fromJson(Map<String, dynamic> json) {
     this.id = json['id'];
