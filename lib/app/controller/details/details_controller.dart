@@ -7,11 +7,11 @@ class DetailsController extends GetxController {
   final QuestionRepository repository;
   DetailsController({@required this.repository}) : assert(repository != null);
 
-  final _post = Question().obs;
-  get post => this._post.value;
-  set post(value) => this._post.value = value;
+  final _question = Question().obs;
+  get question => this._question.value;
+  set question(value) => this._question.value = value;
 
-  editar(post) {
+  editar(question) {
     print('editar');
   }
 

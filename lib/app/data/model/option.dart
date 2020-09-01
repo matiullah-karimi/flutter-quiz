@@ -1,20 +1,20 @@
 class Question {
   int id;
   String text;
-  String description;
+  bool isCorrect;
 
-  Question({this.id, this.text, this.description});
+  Question({this.id, this.text, this.isCorrect});
 
   Question.fromJson(Map<String, dynamic> json) {
     this.id = json['id'];
     this.text = json['text'];
-    this.description = json['description'];
+    this.isCorrect = json['isCorrect'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['name'] = this.text;
-    data['description'] = this.description;
+    data['isCorrect'] = this.isCorrect;
     return data;
   }
 }

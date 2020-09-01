@@ -13,17 +13,17 @@ class HomePage extends GetView<HomeController> {
             Get.find<HomeController>().getAll();
           },
           builder: (_) {
-            return _.postList.length < 1
+            return _.questionList.length < 1
                 ? LoadingWidget()
                 : ListView.builder(
                     itemBuilder: (context, index) {
                       return ListTile(
-                        title: Text(_.postList[index].title),
-                        subtitle: Text(_.postList[index].body),
-                        onTap: () => _.details(_.postList[index]),
+                        title: Text(_.questionList[index].text),
+                        subtitle: Text(_.questionList[index].description),
+                        onTap: () => _.details(_.questionList[index]),
                       );
                     },
-                    itemCount: _.postList.length,
+                    itemCount: _.questionList.length,
                   );
           },
         ),
