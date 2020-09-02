@@ -27,4 +27,12 @@ class HomeController extends GetxController {
     this.question = question;
     Get.toNamed(Routes.DETAILS);
   }
+
+  create() {
+    Get.toNamed(Routes.CREATE);
+  }
+
+  store(Question question) {
+    this.questionList = [...this.questionList, question];
+  }
 }
